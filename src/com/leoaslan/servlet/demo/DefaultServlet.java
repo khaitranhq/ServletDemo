@@ -17,5 +17,13 @@ public class DefaultServlet extends HttpServlet{
 		ServletOutputStream outputStream = response.getOutputStream();
 		
 		outputStream.print("<html>");
+		outputStream.print("<head><title>Page not found</title></head>");
+		
+		outputStream.print("<body>");
+		outputStream.print("<h3>Sorry!Page not found</h3>");
+		outputStream.print("<h1>404</h1>");
+		outputStream.print("Message from servlet: " + this.getClass().getName());
+		outputStream.print("</body>");
+		outputStream.print("<html>");
 	}
 }
